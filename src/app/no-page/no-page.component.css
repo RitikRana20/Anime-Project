@@ -1,0 +1,11 @@
+
+.no-page-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.no-page-image {
+  max-width: 120%;
+  height: auto !important;
+  margin-top: 140px;
+}

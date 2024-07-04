@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Example of CSS media queries */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Default styles for desktop */
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav button {
+  padding: 10px;
+}
+
+/* Styles for mobile */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Optional: Hover effect for the link */
+.footer-link:hover {
+  color: #ffcc00; /* Change the color to a shade of your choice */
+}
+
+
+

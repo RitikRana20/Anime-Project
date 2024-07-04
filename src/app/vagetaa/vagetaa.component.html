@@ -1,0 +1,12 @@
+<div class="fix-bck2">
+  <h1>Anime Lover</h1>
+  <br />
+</div>
+<div class="gallery">
+  <div class="image" *ngFor="let image of images">
+    <img [src]="image.src" [alt]="image.alt" />
+    <p>{{ image.Description }}</p>
+    <button (click)="downloadImage(image.src)">Download</button>
+    <div class="caption"></div>
+  </div>
+</div>

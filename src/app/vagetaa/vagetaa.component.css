@@ -1,0 +1,45 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 424px;
+}
+.image img {
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.1); 
+  cursor: pointer; 
+}
+
+
+.image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  border: solid;
+}
+
+.image button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.image button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

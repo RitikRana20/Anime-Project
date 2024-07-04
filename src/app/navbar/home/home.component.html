@@ -1,0 +1,20 @@
+<!-- component.html -->
+<div class="fix-bck2">
+  <h1>Anime Lover</h1>
+  <h3>{{today| date }}</h3>
+  <br />
+  <div class="gallery-container1">
+    <div class="gallery-item1" *ngFor="let item of galleryItems1" (click)="openModal1(item)">
+      <img [src]="item.src" />
+      <button type="button" class="overlay-button">
+        <a id="bt" routerLink="/vagetaa/{{ item.id }}">Show more...</a>
+      </button>
+    </div>
+    <div class="modal" [class.show]="isModalOpen1" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <img [src]="selectedImage.src" (click)="closeModal()" />
+        <div class="caption"></div>
+      </div>
+    </div>
+  </div>
+</div>
