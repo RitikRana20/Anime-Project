@@ -1,0 +1,28 @@
+{
+  "animeStore": [
+    {
+      "id": 1,
+      "name": "Giyuimage",
+      "price": 50,
+      "image": "/assets/giyuimages/download (1).jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Gojoimage",
+      "price": 40,
+      "image": "/assets/Gojoimages/download (1).jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Leviimage",
+      "price": 60,
+      "image": "/assets/Leviimages/download (1).jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Tokyoimage",
+      "price": 70,
+      "image": "/assets/tokyoimages/download (1).jpeg"
+    }
+  ]
+}

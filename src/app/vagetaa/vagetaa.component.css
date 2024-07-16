@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  height: 424px;
+  height: 457px;
 }
 .image img {
   transition: transform 0.3s ease;

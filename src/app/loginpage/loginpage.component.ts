@@ -7,6 +7,9 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./loginpage.component.css'],
 })
 export class LoginpageComponent {
+inloginpage() {
+// throw new Error('Method not implemented.');
+}
   signupobj: any;
   loginForm: any;
   constructor(private Router: Router, private toastr: ToastrService) {}
@@ -35,6 +38,8 @@ export class LoginpageComponent {
     this.toastr.success('Login done Succesfully!');
     // alert('Login successful!');
     this.Router.navigateByUrl('/home'.toString());
+
+
   }
 
   //   loginForm: FormGroup;

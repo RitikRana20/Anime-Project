@@ -7,7 +7,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { VagetaaComponent } from './vagetaa/vagetaa.component';
 import { NoPageComponent } from './no-page/no-page.component';
-
+import { CartComponent } from './cart/cart.component';
+import { AnimeStoreComponent } from './anime-store/anime-store.component';
 const routes: Routes = [
   {
     path: '',
@@ -15,13 +16,16 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
+    path: 'login',
     component: LoginpageComponent,
   },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'sign up', component: RegistrationComponent },
+  { path: 'cart', component: CartComponent },
+  {path:'animestore', component:AnimeStoreComponent},
+
   // { path: 'loginpage', component: LoginpageComponent },
   {
     path: 'login',

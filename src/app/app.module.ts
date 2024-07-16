@@ -20,12 +20,17 @@ import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.componen
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
-const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginpageComponent },
-  { path: 'Sign-up', component: RegistrationComponent },
-  { path: 'home', component: HomeComponent },
-];
+import { CartComponent } from './cart/cart.component';
+import { AnimeStoreComponent } from './anime-store/anime-store.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
+
+// const routes: Routes = [
+//   { path: '', redirectTo: '/login', pathMatch: 'full' },
+//   { path: 'login', component: LoginpageComponent },
+//   { path: 'Sign-up', component: RegistrationComponent },
+//   { path: 'home', component: HomeComponent },
+// ];
 
 @NgModule({
   declarations: [
@@ -40,20 +45,22 @@ const routes: Routes = [
     VagetaaComponent,
     NoPageComponent,
     ConfirmDeleteComponent,
+    CartComponent,
+    AnimeStoreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbDropdown,
     FormsModule,
     CommonModule,
     NgbModule,
     ReactiveFormsModule,
-
+    MatTooltipModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     MatDialogModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

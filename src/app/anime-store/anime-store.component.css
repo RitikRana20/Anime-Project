@@ -1,0 +1,110 @@
+.card {
+  margin-bottom: 150%;
+}
+
+/* General Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 110%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Small Devices (Phones, 600px and down) */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+  }
+}
+
+/* Medium Devices (Tablets, 600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+  .card {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+  }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card {
+    flex: 1 1 23%;
+    max-width: 23%;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+  }
+}

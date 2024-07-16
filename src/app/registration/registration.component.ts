@@ -12,8 +12,8 @@ export class RegistrationComponent implements OnInit {
     if (localData != null) {
       this.signupUsers = JSON.parse(localData);
     }
-  } 
-  
+  }
+
   constructor(private http: HttpClientModule) {}
   signupUsers: any[] = [];
   signupobj: any = {

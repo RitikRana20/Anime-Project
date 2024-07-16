@@ -195,4 +195,7 @@ export class VagetaaComponent implements OnInit {
     link.click();
     document.body.removeChild(link);
   }
+  Addtocart() {
+    alert('Image added to cart!');
+  }
 }

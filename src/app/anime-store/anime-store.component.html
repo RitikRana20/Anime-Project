@@ -1,0 +1,24 @@
+<div class="container" style="height: 110%; margin-bottom: 10%;">
+  <div class="row">
+    <ng-container *ngFor="let animeStore of anime let i = index" class="card">
+      <div class="card col-md-3">
+        <img src="{{ animeStore.image }}"/>
+        <h3
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          Item: {{ animeStore.name }}
+        </h3>
+        <p>Price: {{ animeStore.price }}$</p>
+        <button class="btn btn-primary" (click)="addToCart(anime)">
+          Add to cart
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

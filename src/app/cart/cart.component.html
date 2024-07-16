@@ -1,0 +1,69 @@
+<ng-container *ngIf="anime.length !== 0" style="height: 110%" >
+  <div class="container">
+    <div class="card-table">
+      <div class="card-order">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let animeStore of anime[0]; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ animeStore.name }}</td>
+              <td>
+                <img
+                  style="width: 120px"
+                  [src]="animeStore.image"
+                  alt="gyvrdc"
+                />
+              </td>
+              <td>{{ animeStore.price }}</td>
+              <td>{{ animeStore.quantity }}</td>
+              <td>{{ animeStore.total }}</td>
+              <td>
+                <span
+                  matTooltip="Delete"
+                  class="material-symbols-outlined pointer-cursor"
+                  (click)="removeItem(animeStore)"
+                >
+                  delete
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="total-price">
+          <h3>Total Price:{{ grandTotal }}</h3>
+        </div>
+        <div class="pay-now">
+          <button (click)="payNow()" class="btn btn-success">Pay Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="anime.length === 0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3HiWS-jZ1TugRU8PfZeUGXyEL0qQt2dL4bQ&s"
+        alt=""
+      />
+      <h4>Your Cart is Empty</h4>
+      <h6>Add item to it now</h6>
+      <button routerLink="/animestore" class="btn btn-primary">Shop Now</button>
+    </div>
+  </div>
+</ng-container>

@@ -95,7 +95,6 @@ a:hover {
   color: #6d44b8;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .main {
     width: 80%;

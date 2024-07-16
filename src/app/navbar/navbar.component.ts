@@ -35,4 +35,11 @@ export class NavbarComponent {
       }
     });
   }
+
+  animestore() {
+    this.router.navigate(['/animestore']);
+  }
+  cart() {
+    this.router.navigate(['/cart']);
+  }
 }
