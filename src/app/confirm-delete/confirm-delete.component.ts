@@ -17,6 +17,6 @@ export class ConfirmDeleteComponent {
 
   onYesClick(): void {
     this.dialogRef.close(true);
-    this.dataSource.data = this.listData;
+    this.dataSource.data = this.listData
   }
 }

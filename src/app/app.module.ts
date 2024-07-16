@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
-
+import { ToastrModule } from 'ngx-toastr';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginpageComponent },
@@ -52,6 +52,8 @@ const routes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent],

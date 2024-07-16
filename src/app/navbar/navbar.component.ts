@@ -10,16 +10,29 @@ import { MatDialog } from '@angular/material/dialog';
 export class NavbarComponent {
   constructor(private router: Router, public dialog: MatDialog) {}
 
+  inloginpage(): boolean {
+    return this.router.url === '/login';
+  }
   logoutt(): void {
     const dialogRef = this.dialog.open(ConfirmDeleteComponent);
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        // this.logout();
+        this.logout();
       }
     });
   }
-  // logout() {
-  //   this.router.navigate(['/login']);
-  // }
+  logout() {
+    this.router.navigate(['/login']);
+  }
+
+  dialogBox() {
+    const dialogRef = this.dialog.open(ConfirmDeleteComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.logout();
+      }
+    });
+  }
 }

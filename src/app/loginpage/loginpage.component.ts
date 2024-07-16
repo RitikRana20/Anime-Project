@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './loginpage.component.html',
@@ -9,16 +9,16 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginpageComponent {
   signupobj: any;
   loginForm: any;
-  constructor(private Router: Router) {}
+  constructor(private Router: Router, private toastr: ToastrService) {}
   loginobj: any = {
     username: '',
     password: '',
   };
   loginError: string = '';
-  // router: any;
+  router: any;
 
   onlogin() {
-    debugger;
+    // debugger;
     const storedUser = localStorage.getItem(this.loginobj.username);
     if (!storedUser) {
       this.loginError = 'User not found.';
@@ -31,9 +31,10 @@ export class LoginpageComponent {
       this.loginError = 'Incorrect password.';
       return;
     }
-
-    alert('Login successful!');
-    this.Router.navigateByUrl('/home');
+    
+    this.toastr.success('Login done Succesfully!');
+    // alert('Login successful!');
+    this.Router.navigateByUrl('/home'.toString());
   }
 
   //   loginForm: FormGroup;

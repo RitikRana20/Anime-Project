@@ -11,6 +11,11 @@ import { NoPageComponent } from './no-page/no-page.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     component: LoginpageComponent,
   },
   { path: 'home', component: HomeComponent },
